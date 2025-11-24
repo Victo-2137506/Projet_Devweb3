@@ -1,0 +1,16 @@
+meta {
+  name: Supprimer une personne historique
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://localhost:3000/api/histoire/supprimer/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

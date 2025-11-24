@@ -1,0 +1,35 @@
+meta {
+  name: Mettre à jour une personne historique
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/api/histoire/modifier/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "histoire": {
+      "nom": "Abraham Lincoln",
+      "pays": "États-Unis",
+      "naissance": "1809-02-12",
+      "mort": "1868-04-15",
+      "vivant": false,
+      "siecle": 19,
+      "role": "Présidente",
+      "faitsMarquants": [
+        "Guerre de Sécession",
+        "Abolissation de l'esclavage",
+        "Fête de Thanksgiving"
+      ]
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

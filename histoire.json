@@ -1,0 +1,258 @@
+[
+  {
+    "nom": "Napoléon Bonaparte",
+    "pays": "France",
+    "naissance": "1769-08-15",
+    "mort": "1821-05-05",
+    "vivant": false,
+    "siecle": 18,
+    "role": "Empereur",
+    "faitsMarquants": [
+      "Couronné empereur en 1804",
+      "Bataille d'Austerlitz",
+      "Code civil"
+    ]
+  },
+  {
+    "nom": "Albert Einstein",
+    "pays": "Allemagne",
+    "naissance": "1879-03-14",
+    "mort": "1955-04-18",
+    "vivant": false,
+    "siecle": 20,
+    "role": "Scientifique",
+    "faitsMarquants": [
+      "Théorie de la relativité",
+      "Prix Nobel de physique 1921"
+    ]
+  },
+  {
+    "nom": "Marie Curie",
+    "pays": "Pologne",
+    "naissance": "1867-11-07",
+    "mort": "1934-07-04",
+    "vivant": false,
+    "siecle": 19,
+    "role": "Scientifique",
+    "faitsMarquants": [
+      "Découverte du radium et polonium",
+      "Prix Nobel de physique et chimie"
+    ]
+  },
+  {
+    "nom": "Martin Luther King Jr.",
+    "pays": "États-Unis",
+    "naissance": "1929-01-15",
+    "mort": "1968-04-04",
+    "vivant": false,
+    "siecle": 20,
+    "role": "Militant",
+    "faitsMarquants": [
+      "Discours : I have a dream",
+      "Leader du mouvement des droits civiques"
+    ]
+  },
+  {
+    "nom": "Gengis Khan",
+    "pays": "Mongolie",
+    "naissance": "1162-01-01",
+    "mort": "1227-08-18",
+    "vivant": false,
+    "siecle": 12,
+    "role": "Conquérant",
+    "faitsMarquants": [
+      "Unification des tribus mongoles",
+      "Création du plus grand empire terrestre"
+    ]
+  },
+  {
+    "nom": "Barack Obama",
+    "pays": "États-Unis",
+    "naissance": "1961-08-04",
+    "mort": null,
+    "vivant": true,
+    "siecle": 20,
+    "role": "Président",
+    "faitsMarquants": [
+      "44e président des États-Unis",
+      "Prix Nobel de la paix 2009"
+    ]
+  },
+  {
+    "nom": "Angela Merkel",
+    "pays": "Allemagne",
+    "naissance": "1954-07-17",
+    "mort": null,
+    "vivant": true,
+    "siecle": 20,
+    "role": "Chancelière",
+    "faitsMarquants": [
+      "Chancelière allemande de 2005 à 2021",
+      "Leadership européen"
+    ]
+  },
+  {
+    "nom": "Malala Yousafzai",
+    "pays": "Pakistan",
+    "naissance": "1997-07-12",
+    "mort": null,
+    "vivant": true,
+    "siecle": 20,
+    "role": "Militante",
+    "faitsMarquants": [
+      "Prix Nobel de la paix 2014",
+      "Droits des filles à l'éducation"
+    ]
+  },
+  {
+    "nom": "Henry Every",
+    "pays": "Angleterre",
+    "naissance": "1659-08-23",
+    "mort": "1696-08-23",
+    "vivant": false,
+    "siecle": 17,
+    "role": "Pirate",
+    "faitsMarquants": [
+      "Attaque du navire moghol Ganj-i-Sawai",
+      "Surnommé le roi des pirates"
+    ]
+  },
+  {
+    "nom": "Greta Thunberg",
+    "pays": "Suède",
+    "naissance": "2003-01-03",
+    "mort": null,
+    "vivant": true,
+    "siecle": 21,
+    "role": "Militante",
+    "faitsMarquants": [
+      "Mouvement Fridays For Future",
+      "Lutte contre le changement climatique"
+    ]
+  },
+  {
+    "nom": "Cléopâtre",
+    "pays": "Égypte",
+    "naissance": "69-01-01",
+    "mort": "30-08-12",
+    "vivant": false,
+    "siecle": 1,
+    "role": "Reine",
+    "faitsMarquants": [
+      "Dernière reine d'Égypte",
+      "Alliance avec César et Marc Antoine"
+    ]
+  },
+  {
+    "nom": "Leonard de Vinci",
+    "pays": "Italie",
+    "naissance": "1452-04-15",
+    "mort": "1519-05-02",
+    "vivant": false,
+    "siecle": 15,
+    "role": "Artiste et Inventeur",
+    "faitsMarquants": [
+      "La Joconde",
+      "Homme de Vitruve",
+      "Nombreuses inventions"
+    ]
+  },
+  {
+    "nom": "Nelson Mandela",
+    "pays": "Afrique du Sud",
+    "naissance": "1918-07-18",
+    "mort": "2013-12-05",
+    "vivant": false,
+    "siecle": 20,
+    "role": "Président et militant",
+    "faitsMarquants": ["Fin de l'apartheid", "Prix Nobel de la paix 1993"]
+  },
+  {
+    "nom": "Socrate",
+    "pays": "Grèce",
+    "naissance": "-470-01-01",
+    "mort": "-399-01-01",
+    "vivant": false,
+    "siecle": -5,
+    "role": "Philosophe",
+    "faitsMarquants": ["Méthode socratique", "Maître de Platon"]
+  },
+  {
+    "nom": "Marie-Antoinette",
+    "pays": "France",
+    "naissance": "1755-11-02",
+    "mort": "1793-10-16",
+    "vivant": false,
+    "siecle": 18,
+    "role": "Reine",
+    "faitsMarquants": [
+      "Dernière reine de France avant la Révolution",
+      "Condamnée à la guillotine"
+    ]
+  },
+  {
+    "nom": "Marco Polo",
+    "pays": "Italie",
+    "naissance": "1254-09-15",
+    "mort": "1324-01-08",
+    "vivant": false,
+    "siecle": 13,
+    "role": "Explorateur",
+    "faitsMarquants": [
+      "Voyage en Chine",
+      "Relations commerciales entre l'Europe et l'Asie"
+    ]
+  },
+  {
+    "nom": "Florence Nightingale",
+    "pays": "Angleterre",
+    "naissance": "1820-05-12",
+    "mort": "1910-08-13",
+    "vivant": false,
+    "siecle": 19,
+    "role": "Réformatrice",
+    "faitsMarquants": [
+      "Fondation des soins infirmiers modernes",
+      "Travail pendant la guerre de Crimée"
+    ]
+  },
+  {
+    "nom": "Jacinda Ardern",
+    "pays": "Nouvelle-Zélande",
+    "naissance": "1980-07-26",
+    "mort": null,
+    "vivant": true,
+    "siecle": 20,
+    "role": "Première ministre",
+    "faitsMarquants": [
+      "Leadership pendant la pandémie COVID-19",
+      "Réformes sociales progressives"
+    ]
+  },
+  {
+    "nom": "Pope Francis",
+    "pays": "Argentine",
+    "naissance": "1936-12-17",
+    "mort": null,
+    "vivant": true,
+    "siecle": 20,
+    "role": "Religieux",
+    "faitsMarquants": [
+      "Premier pape d'Amérique du Sud",
+      "Réformes et messages progressistes"
+    ]
+  },
+  {
+    "nom": "Katherine Johnson",
+    "pays": "États-Unis",
+    "naissance": "1918-08-26",
+    "mort": "2020-02-24",
+    "vivant": false,
+    "siecle": 20,
+    "role": "Mathématicienne",
+    "faitsMarquants": [
+      "Travail à la NASA sur le programme spatial",
+      "Reconnaissance pour ses calculs cruciaux"
+    ]
+  }
+]

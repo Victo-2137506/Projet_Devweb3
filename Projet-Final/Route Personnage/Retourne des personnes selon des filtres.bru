@@ -1,0 +1,21 @@
+meta {
+  name: Retourne des personnes selon des filtres
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/api/histoire/filtre?pays=France&siecle=18
+  body: none
+  auth: inherit
+}
+
+params:query {
+  pays: France
+  siecle: 18
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
