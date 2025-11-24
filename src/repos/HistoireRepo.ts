@@ -1,4 +1,5 @@
 import { IHistoire, Histoire } from '@src/models/Histoire';
+import { RootFilterQuery } from 'mongoose';
 
 /**
  * Extraire toutes les personnes historiques
@@ -15,9 +16,11 @@ async function getOne(id: string): Promise<IHistoire | null> {
 }
 
 /**
- * Trouver des personnes selon une query
+ * Trouver des personnes selon des filtres
  */
-async function getByFilters(query: any): Promise<IHistoire[]> {
+async function getByFilters(
+  query: RootFilterQuery<IHistoire>,
+): Promise<IHistoire[]> {
   return await Histoire.find(query);
 }
 

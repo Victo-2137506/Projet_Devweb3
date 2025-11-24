@@ -38,7 +38,7 @@ async function getByFilters(
   filters: Partial<Pick<IHistoire, 'pays' | 'siecle'>>,
 ): Promise<IHistoire[]> {
   // Construction de la query
-  const query: any = {};
+  const query = {} as Partial<Pick<IHistoire, 'pays' | 'siecle'>>;
   if (filters.pays) query.pays = filters.pays;
   if (filters.siecle) query.siecle = filters.siecle;
 
