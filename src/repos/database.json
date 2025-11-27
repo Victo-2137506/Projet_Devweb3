@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": 123456789,
+      "name": "Jean Claude",
+      "email": "test@gmail.com",
+      "password": "123",
+      "created": "2024-03-22T05:42:18.895Z"
+    }
+  ]
+}

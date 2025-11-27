@@ -35,14 +35,14 @@ async function getOne(id: string): Promise<IHistoire> {
  * Rechercher des personnes historiques par filtres
  */
 async function getByFilters(
-  filters: Partial<Pick<IHistoire, 'pays' | 'siecle'>>,
+  pays?: string,
+  siecle?: number,
 ): Promise<IHistoire[]> {
-  // Construction de la query
-  const query = {} as Partial<Pick<IHistoire, 'pays' | 'siecle'>>;
-  if (filters.pays) query.pays = filters.pays;
-  if (filters.siecle) query.siecle = filters.siecle;
+  const query: { pays?: string; siecle?: number } = {};
+  if (pays) query.pays = pays;
+  if (siecle) query.siecle = siecle;
 
-  return await HistoireRepo.getByFilters(query);
+  return HistoireRepo.getByFilters(query);
 }
 
 /**
@@ -76,10 +76,7 @@ async function addOne(histoire: IHistoire): Promise<IHistoire> {
 /**
  * Mettre à jour une personne historique
  */
-async function updateOne(
-  id: string,
-  histoire: Partial<IHistoire>,
-): Promise<IHistoire> {
+async function updateOne(id: string, histoire: IHistoire): Promise<IHistoire> {
   const existe = await HistoireRepo.persists(id);
   if (!existe) {
     throw new Error(PERSONNE_NOT_FOUND_ERR);

@@ -7,36 +7,33 @@ import UserRoutes from './UserRoutes';
 import JetonRoutes from './JetonRoutes';
 
 import { Histoire } from '@src/models/Histoire';
+import { isString } from 'jet-validators';
+
+/* eslint-disable */
 
 /****************************************************************************** 
                                 Setup
 ******************************************************************************/
 
 // ** Validation d'une histoire ** //
+// A CORRIGER //
 function validateHistoire(req: Request, res: Response, next: NextFunction) {
-  if (!req.body) {
-    res
+  if (!req.body || !req.body.histoire) {
+    return res
       .status(HttpStatusCodes.BAD_REQUEST)
       .send({ error: 'Histoire requise' })
       .end();
-    return;
   }
 
-  if (!req.body.histoire) {
-    res
-      .status(HttpStatusCodes.BAD_REQUEST)
-      .send({ error: 'Histoire requise' })
-      .end();
-    return;
-  }
+  // On passe directement l'objet
+  const nouvellePersonne = new Histoire(req.body.histoire);
 
-  const nouvelleHistoire = new Histoire(req.body.histoire);
-  const error = nouvelleHistoire.validateSync();
+  const error = nouvellePersonne.validateSync();
   if (error) {
-    res.status(HttpStatusCodes.BAD_REQUEST).send(error).end();
-  } else {
-    next();
+    return res.status(HttpStatusCodes.BAD_REQUEST).send(error).end();
   }
+
+  next();
 }
 
 // ** Ajout des router ** //

@@ -44,7 +44,7 @@ async function persists(id: string): Promise<boolean> {
  */
 async function updateOne(
   id: string,
-  histoire: Partial<IHistoire>,
+  histoire: IHistoire,
 ): Promise<IHistoire | null> {
   return await Histoire.findByIdAndUpdate(id, histoire, { new: true });
 }

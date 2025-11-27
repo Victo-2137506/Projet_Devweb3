@@ -10,6 +10,15 @@ get {
   auth: none
 }
 
+body:json {
+  {
+    "userLogin": {
+      "email": "test@gmail.com",
+      "password": "123"
+    }
+  }
+}
+
 script:post-response {
   bru.setEnvVar('jwttoken', res.body.token)
 }

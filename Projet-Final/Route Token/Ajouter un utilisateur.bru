@@ -1,0 +1,26 @@
+meta {
+  name: Ajouter un utilisateur
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/api/users/add
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "users": {
+      "name":"Jamie",
+      "email": "jamie@gmail.com",
+      "password": "123"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

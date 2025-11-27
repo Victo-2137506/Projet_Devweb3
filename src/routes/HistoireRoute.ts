@@ -3,6 +3,8 @@ import { IReq, IRes } from './common/types';
 import HistoireService from '@src/services/HistoireService';
 import { IHistoire } from '@src/models/Histoire';
 
+/* eslint-disable */
+
 // **** Functions **** //
 /**
  * Extraire toutes les personnages historique
@@ -26,10 +28,11 @@ async function getOne(req: IReq, res: IRes) {
  */
 async function getByFilters(req: IReq, res: IRes) {
   const { pays, siecle } = req.query;
-  const resultat = await HistoireService.getByFilters({
-    pays: pays as string,
-    siecle: siecle ? Number(siecle) : undefined,
-  });
+
+  const resultat = await HistoireService.getByFilters(
+    pays ? String(pays) : undefined,
+    siecle ? Number(siecle) : undefined,
+  );
 
   return res.status(HttpStatusCodes.OK).json({ histoires: resultat });
 }
@@ -49,7 +52,7 @@ async function add(req: IReq, res: IRes) {
 async function updateOne(req: IReq, res: IRes) {
   const { id } = req.params;
   const { histoire } = req.body;
-  await HistoireService.updateOne(id as string, histoire as Partial<IHistoire>);
+  await HistoireService.updateOne(id as string, histoire as IHistoire);
   return res.status(HttpStatusCodes.OK).end('La personne à bien été modifiée');
 }
 
