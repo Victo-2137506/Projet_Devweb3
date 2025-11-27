@@ -25,7 +25,7 @@ function authenticateToken(req: Request, res: Response, next: NextFunction) {
 
   if (!token) return res.sendStatus(HttpStatusCodes.UNAUTHORIZED);
 
-  jwt.verify(token, ENV.Jwtsecret ?? '', (err, decoded) => {
+  jwt.verify(token, ENV.JWTSECRET ?? '', (err, decoded) => {
     console.log(err);
 
     if (err) return res.sendStatus(HttpStatusCodes.FORBIDDEN);

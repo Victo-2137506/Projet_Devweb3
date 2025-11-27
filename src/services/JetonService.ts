@@ -17,7 +17,7 @@ async function generateToken(utilisateur: IUserLogin): Promise<string> {
   );
 
   if (utilisateurBD && utilisateurBD.password === utilisateur.password) {
-    return jwt.sign(utilisateur.email, ENV.Jwtsecret ?? '');
+    return jwt.sign(utilisateur.email, ENV.JWTSECRET ?? '');
   } else {
     return '';
   }
