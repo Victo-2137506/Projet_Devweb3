@@ -18,7 +18,7 @@ function authenticateToken(req: Request, res: Response, next: NextFunction) {
     return;
   }
 
-  const authHeader = req.headers['authorization']; // optional chaining + dot notation
+  const authHeader = req.headers?.authorization; // optional chaining + dot notation
   const token = authHeader?.split(' ')[1];
 
   console.log(token);
