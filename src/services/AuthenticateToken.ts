@@ -12,7 +12,7 @@ import ENV from '@src/common/constants/ENV';
  */
 function authenticateToken(req: Request, res: Response, next: NextFunction) {
   // Ne pas vérifier le token si l'url est celui de generatetoken
-  const lastPartOfUrl = req.url.split('/')[req.url.split('/').length - 1]; // remplace .at(-1)
+  const lastPartOfUrl = req.url.split('/')[req.url.split('/').length - 1];
   if (lastPartOfUrl === 'generatetoken') {
     next();
     return;
