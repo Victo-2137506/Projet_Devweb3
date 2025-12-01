@@ -13,6 +13,8 @@ import { RouteError } from '@src/common/util/route-errors';
 import { NodeEnvs } from '@src/common/constants';
 import authenticateToken from './services/AuthenticateToken';
 
+import cors from 'cors';
+
 /******************************************************************************
                                 Setup
 ******************************************************************************/
@@ -30,6 +32,7 @@ if (ENV.NodeEnv === NodeEnvs.Dev) {
   app.use(morgan('dev'));
 }
 
+app.use(cors());
 // Security
 if (ENV.NodeEnv === NodeEnvs.Production) {
   // eslint-disable-next-line n/no-process-env

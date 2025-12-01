@@ -56,7 +56,7 @@ histoireRouter.put(Paths.Histoire.Update, HistoireRoutes.updateOne);
 histoireRouter.delete(Paths.Histoire.Delete, HistoireRoutes.deleteOne);
 
 // ** Route pour générer un token ** //
-tokenRouter.get(Paths.GenerateToken.Get, JetonRoutes.generateToken);
+tokenRouter.post(Paths.GenerateToken.Post, JetonRoutes.generateToken);
 
 // ** Route pour l'utilisateur ** //
 userRouter.get(Paths.Users.Get, UserRoutes.getAll);

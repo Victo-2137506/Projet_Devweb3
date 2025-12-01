@@ -11,7 +11,7 @@ export default {
   },
   GenerateToken: {
     Base: '/generatetoken',
-    Get: '/',
+    Post: '/',
   },
   Users: {
     Base: '/users',
