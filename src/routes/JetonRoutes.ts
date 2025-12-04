@@ -8,6 +8,7 @@ import { parseReq } from './common/util';
                                 Constants
 ******************************************************************************/
 
+// test.login ne pas utiliser
 const Validators = {
   generatetoken: parseReq({ userLogin: User.testlogin }),
 } as const;
