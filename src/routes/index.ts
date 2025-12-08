@@ -62,7 +62,6 @@ tokenRouter.post(Paths.GenerateToken.Post, JetonRoutes.generateToken);
 userRouter.get(Paths.Users.Get, UserRoutes.getAll);
 userRouter.post(Paths.Users.Add, UserRoutes.add);
 userRouter.put(Paths.Users.Update, UserRoutes.update);
-userRouter.delete(Paths.Users.Delete, UserRoutes.delete);
 
 // **** Export default **** //
 export default apiRouter;
