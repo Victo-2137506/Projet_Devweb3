@@ -1,7 +1,269 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Démo API",
-    "version": "1.0.0"
+    "title": "API Histoire",
+    "version": "1.0.0",
+    "description": "API permettant de gérer des personnages historiques."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Serveur local"
+    },
+    {
+      "url": "https://histoireapi-e8czf4c8ehcvdgcw.canadacentral-01.azurewebsites.net",
+      "description": "Serveur Azure"
+    }
+  ],
+  "paths": {
+    "/api/histoire/all": {
+      "get": {
+        "summary": "Obtenir toutes les personnages historiques",
+        "responses": {
+          "200": {
+            "description": "Liste des personnages historiques",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": { "type": "string" },
+                      "nom": { "type": "string" },
+                      "pays": { "type": "string" },
+                      "naissance": { "type": "string", "format": "date-time" },
+                      "mort": {
+                        "type": ["string", "null"],
+                        "format": "date-time"
+                      },
+                      "vivant": { "type": "boolean" },
+                      "siecle": { "type": "integer" },
+                      "role": { "type": "string" },
+                      "faitsMarquants": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/histoire/{id}": {
+      "get": {
+        "summary": "Obtenir une personnage historique par ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Personnalité trouvée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "_id": { "type": "string" },
+                    "nom": { "type": "string" },
+                    "pays": { "type": "string" },
+                    "naissance": { "type": "string", "format": "date-time" },
+                    "mort": {
+                      "type": ["string", "null"],
+                      "format": "date-time"
+                    },
+                    "vivant": { "type": "boolean" },
+                    "siecle": { "type": "integer" },
+                    "role": { "type": "string" },
+                    "faitsMarquants": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/histoire/filtre": {
+      "get": {
+        "summary": "Rechercher des personnages selon des filtres",
+        "parameters": [
+          { "name": "pays", "in": "query", "schema": { "type": "string" } },
+          { "name": "siecle", "in": "query", "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste filtrée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "_id": { "type": "string" },
+                      "nom": { "type": "string" },
+                      "pays": { "type": "string" },
+                      "naissance": { "type": "string", "format": "date-time" },
+                      "mort": {
+                        "type": ["string", "null"],
+                        "format": "date-time"
+                      },
+                      "vivant": { "type": "boolean" },
+                      "siecle": { "type": "integer" },
+                      "role": { "type": "string" },
+                      "faitsMarquants": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/histoire/ajouter": {
+      "post": {
+        "summary": "Ajouter une personne historique",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "nom",
+                  "pays",
+                  "naissance",
+                  "vivant",
+                  "siecle",
+                  "role",
+                  "faitsMarquants"
+                ],
+                "properties": {
+                  "nom": { "type": "string" },
+                  "pays": { "type": "string" },
+                  "naissance": { "type": "string", "format": "date-time" },
+                  "mort": { "type": ["string", "null"], "format": "date-time" },
+                  "vivant": { "type": "boolean" },
+                  "siecle": { "type": "integer" },
+                  "role": { "type": "string" },
+                  "faitsMarquants": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Création effectuée",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": { "id": { "type": "string" } }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/histoire/modifier/{id}": {
+      "put": {
+        "summary": "Modifier une personne historique",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nom": { "type": "string" },
+                  "pays": { "type": "string" },
+                  "naissance": { "type": "string", "format": "date-time" },
+                  "mort": { "type": ["string", "null"], "format": "date-time" },
+                  "vivant": { "type": "boolean" },
+                  "siecle": { "type": "integer" },
+                  "role": { "type": "string" },
+                  "faitsMarquants": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Modification réussie" }
+        }
+      }
+    },
+
+    "/api/histoire/supprimer/{id}": {
+      "delete": {
+        "summary": "Supprimer une personne historique",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Suppression effectuée" }
+        }
+      }
+    },
+
+    "/api/generatetoken": {
+      "post": {
+        "summary": "Générer un JSON Web Token",
+        "responses": {
+          "200": {
+            "description": "Token généré",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": { "token": { "type": "string" } }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

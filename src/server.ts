@@ -14,10 +14,21 @@ import { NodeEnvs } from '@src/common/constants';
 import authenticateToken from './services/AuthenticateToken';
 
 import cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
+import fs from 'fs';
 
 /******************************************************************************
                                 Setup
 ******************************************************************************/
+
+const swaggerDocument = JSON.parse(
+  fs.readFileSync('./src/config/documentation.json', 'utf8'),
+);
+
+const swaggerOptions = {
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: 'Demo API',
+};
 
 const app = express();
 
@@ -31,6 +42,12 @@ app.use(express.urlencoded({ extended: true }));
 if (ENV.NodeEnv === NodeEnvs.Dev) {
   app.use(morgan('dev'));
 }
+
+app.use(
+  '/api/docs',
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerDocument, swaggerOptions),
+);
 
 app.use(cors());
 // Security

@@ -7,7 +7,6 @@ import UserRoutes from './UserRoutes';
 import JetonRoutes from './JetonRoutes';
 
 import { Histoire } from '@src/models/Histoire';
-import { isString } from 'jet-validators';
 
 /* eslint-disable */
 
