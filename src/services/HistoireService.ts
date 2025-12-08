@@ -58,14 +58,14 @@ async function addOne(histoire: IHistoire): Promise<IHistoire> {
     throw new Error(CHAMP_MANQUANT_ERR);
   }
 
-  // Validation personnalisée : vérifier cohérence dates
+  // Validation cohérence dates
   if (histoire.mort && new Date(histoire.mort) < new Date(histoire.naissance)) {
     throw new Error(
       'La date de décès ne peut pas être antérieure à la date de naissance',
     );
   }
 
-  // Validation personnalisée : siècle logique
+  // Validation siècle
   if (histoire.siecle < 1 || histoire.siecle > 21) {
     throw new Error('Le siècle doit être compris entre le 1er et 21ème');
   }

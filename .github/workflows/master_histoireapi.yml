@@ -28,6 +28,10 @@ jobs:
           npm install
           npm run build --if-present
 
+      - name: copie bd
+        run: |
+          cp src/repos/database.json dist/repos/database.json
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
