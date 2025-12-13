@@ -39,12 +39,10 @@ function validateHistoire(req: Request, res: Response, next: NextFunction) {
 const apiRouter = Router();
 const histoireRouter = Router();
 const tokenRouter = Router();
-const userRouter = Router();
 
 // ** Ajout des chemins pour les router ** //
 apiRouter.use(Paths.Histoire.Base, histoireRouter);
 apiRouter.use(Paths.GenerateToken.Base, tokenRouter);
-apiRouter.use(Paths.Users.Base, userRouter);
 
 // ** Route pour les personnes historiques ** //
 histoireRouter.get(Paths.Histoire.GetAll, HistoireRoutes.getAll);
@@ -56,11 +54,6 @@ histoireRouter.delete(Paths.Histoire.Delete, HistoireRoutes.deleteOne);
 
 // ** Route pour générer un token ** //
 tokenRouter.post(Paths.GenerateToken.Post, JetonRoutes.generateToken);
-
-// ** Route pour l'utilisateur ** //
-userRouter.get(Paths.Users.Get, UserRoutes.getAll);
-userRouter.post(Paths.Users.Add, UserRoutes.add);
-userRouter.put(Paths.Users.Update, UserRoutes.update);
 
 // **** Export default **** //
 export default apiRouter;
