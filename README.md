@@ -12,7 +12,7 @@ PS : Dans le fichier .env.example, l’URL mongodb://localhost:27017/personnage_
 
 - Créer une BD sur MongoDB utilisant le même nom de BD que l'URL de connection.
 
-- Importer histoire.json se trouvant dans le dossier /Bd/histoire.json qui comporte des données déjà existant.
+- Importer histoire.json se trouvant dans le dossier /dev/histoire.json qui comporte des données déjà existant.
 
 ## URL de l'api publiée
 

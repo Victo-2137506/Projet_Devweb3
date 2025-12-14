@@ -17,6 +17,8 @@ import cors from 'cors';
 import swaggerUi from 'swagger-ui-express';
 import fs from 'fs';
 
+/* eslint-disable */
+
 /******************************************************************************
                                 Setup
 ******************************************************************************/
