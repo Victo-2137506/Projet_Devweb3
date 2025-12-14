@@ -1,65 +1,21 @@
-## About
+## Procédure d'installation de l'API sur un poste local
 
-This project was created with [express-generator-typescript](https://github.com/seanpmaxwell/express-generator-typescript).
+- Copier le fichier .env.example et créer un fichier .env à la racine du projet.
 
-**IMPORTANT** for demo purposes I had to disable `helmet` in production. In any real world app you should change these 3 lines of code in `src/server.ts`:
-```ts
-// eslint-disable-next-line n/no-process-env
-if (!process.env.DISABLE_HELMET) {
-  app.use(helmet());
-}
-```
+- Modifier la variable MONGODB afin qu’elle contienne la chaîne de connexion MongoDB, qu’elle soit locale ou en ligne.
 
-To just this:
-```ts
-app.use(helmet());
-```
+- Définir le host et le port.
 
+PS : Dans le fichier .env.example, l’URL mongodb://localhost:27017/personnage_historique se termine par personnage_historique, ce qui permet de préciser la base de données à utiliser.
 
-## Available Scripts
+## Procédure de création de la base de données
 
-### `npm run clean-install`
+- Créer une BD sur MongoDB utilisant le même nom de BD que l'URL de connection.
 
-Remove the existing `node_modules/` folder, `package-lock.json`, and reinstall all library modules.
+- Importer histoire.json se trouvant dans le dossier /Bd/histoire.json qui comporte des données déjà existant.
 
+## URL de l'api publiée
 
-### `npm run dev` or `npm run dev:hot` (hot reloading)
+- https://histoireapi-e8czf4c8ehcvdgcw.canadacentral-01.azurewebsites.net
 
-Run the server in development mode.<br/>
-
-**IMPORTANT** development mode uses `swc` for performance reasons which DOES NOT check for typescript errors. Run `npm run type-check` to check for type errors. NOTE: you should use your IDE to prevent most type errors.
-
-
-### `npm test` or `npm run test:hot` (hot reloading)
-
-Run all unit-tests.
-
-
-### `npm test -- "name of test file" (i.e. users).`
-
-Run a single unit-test.
-
-
-### `npm run lint`
-
-Check for linting errors.
-
-
-### `npm run build`
-
-Build the project for production.
-
-
-### `npm start`
-
-Run the production build (Must be built first).
-
-
-### `npm run type-check`
-
-Check for typescript errors.
-
-
-## Additional Notes
-
-- If `npm run dev` gives you issues with bcrypt on MacOS you may need to run: `npm rebuild bcrypt --build-from-source`. 
+- Pour la documentation de l'api : https://histoireapi-e8czf4c8ehcvdgcw.canadacentral-01.azurewebsites.net/api/docs
