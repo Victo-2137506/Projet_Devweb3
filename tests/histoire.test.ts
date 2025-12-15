@@ -16,6 +16,8 @@ import Paths from './common/Paths';
 import { parseValidationErr, TRes } from './common/util';
 import { agent } from './support/setup';
 
+/* eslint-disable */
+
 // Le code est inspiré des notes de cours : https://web3.profinfo.ca/tester_api/
 
 /******************************************************************************
