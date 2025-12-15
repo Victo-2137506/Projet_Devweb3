@@ -5,6 +5,8 @@ import ENV from '@src/common/constants/ENV';
 
 export const UTILISATEUR_NOT_FOUND_ERR = 'Utilisateur non trouvé';
 
+// Le code est inspiré des notes de cours : // Le code est inspiré des notes de cours : https://web3.profinfo.ca/express_jwt/
+
 /**
  * Générer un jeton pour un utilisateur
  *

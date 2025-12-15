@@ -2,6 +2,9 @@ import JetonService from '@src/services/JetonService';
 import User from '@src/models/User';
 import { IReq, IRes } from './common/types';
 import { parseReq } from './common/util';
+
+// Le code est inspiré des notes de cours : // Le code est inspiré des notes de cours : https://web3.profinfo.ca/express_jwt/
+
 // **** Functions **** //
 
 /******************************************************************************

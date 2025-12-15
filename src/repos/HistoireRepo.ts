@@ -1,6 +1,8 @@
 import { IHistoire, Histoire } from '@src/models/Histoire';
 import { RootFilterQuery } from 'mongoose';
 
+// Le code est inspiré des notes de cours : https://web3.profinfo.ca/projet_complet_mongoose/
+
 /**
  * Extraire toutes les personnes historiques
  */

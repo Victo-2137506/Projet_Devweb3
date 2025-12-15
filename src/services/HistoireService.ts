@@ -1,6 +1,8 @@
 import HistoireRepo from '@src/repos/HistoireRepo';
 import { IHistoire } from '@src/models/Histoire';
 
+// Le code est inspiré des notes de cours : https://web3.profinfo.ca/projet_complet_mongoose/
+
 /******************************************************************************
                                 Constantes
 ******************************************************************************/

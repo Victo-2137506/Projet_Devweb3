@@ -19,6 +19,8 @@ import fs from 'fs';
 
 /* eslint-disable */
 
+// Le code est inspiré des notes de cours : // Le code est inspiré des notes de cours : https://web3.profinfo.ca/express_jwt/
+
 /******************************************************************************
                                 Setup
 ******************************************************************************/

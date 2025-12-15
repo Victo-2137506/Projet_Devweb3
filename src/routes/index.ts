@@ -3,10 +3,11 @@ import HttpStatusCodes from '@src/common/constants/HttpStatusCodes';
 
 import Paths from '@src/common/constants/Paths';
 import HistoireRoutes from './HistoireRoute';
-import UserRoutes from './UserRoutes';
 import JetonRoutes from './JetonRoutes';
 
 import { Histoire } from '@src/models/Histoire';
+
+// Le code est inspiré des notes de cours : https://web3.profinfo.ca/projet_complet_mongoose/
 
 /* eslint-disable */
 
@@ -15,7 +16,6 @@ import { Histoire } from '@src/models/Histoire';
 ******************************************************************************/
 
 // ** Validation d'une histoire ** //
-// A CORRIGER //
 function validateHistoire(req: Request, res: Response, next: NextFunction) {
   if (!req.body || !req.body.histoire) {
     return res

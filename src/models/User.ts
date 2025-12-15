@@ -4,6 +4,8 @@ import { parseObject, TParseOnError } from 'jet-validators/utils';
 import { isRelationalKey, transIsDate } from '@src/common/util/validators';
 import { IModel } from './common/types';
 
+// Le code est inspiré des notes de cours : // Le code est inspiré des notes de cours : https://web3.profinfo.ca/express_jwt/
+
 /******************************************************************************
                                  Constants
 ******************************************************************************/

@@ -5,6 +5,8 @@ import { IHistoire } from '@src/models/Histoire';
 
 /* eslint-disable */
 
+// Le code est inspiré des notes de cours : https://web3.profinfo.ca/projet_complet_mongoose/
+
 // **** Functions **** //
 /**
  * Extraire toutes les personnages historique

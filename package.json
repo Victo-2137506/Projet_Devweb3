@@ -8,7 +8,7 @@
     "dev:hot": "cross-env nodemon --exec \"npm run dev\" --watch ./src --ext .ts",
     "lint": "eslint .",
     "start": "NODE_ENV=production node -r ./config.js ./dist",
-    "test": "NODE_ENV=test vitest",
+    "test": "cross-env NODE_ENV=test vitest",
     "type-check": "tsc --noEmit"
   },
   "engines": {

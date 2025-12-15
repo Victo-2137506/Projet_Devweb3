@@ -1,3 +1,5 @@
+// Le code est inspiré des notes de cours : https://web3.profinfo.ca/projet_complet_mongoose/
+
 export default {
   Base: '/api',
   Histoire: {
@@ -10,7 +12,7 @@ export default {
     Delete: '/supprimer/:id', // Supprimer une personne historique par ID
   },
   GenerateToken: {
-    Base: '/generatetoken',
+    Base: '/generatetoken', // Génere le token
     Post: '/',
   },
 } as const;

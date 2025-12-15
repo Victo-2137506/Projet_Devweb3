@@ -3,6 +3,8 @@ import { Response, Request, NextFunction } from 'express';
 import HttpStatusCodes from '@src/common/constants/HttpStatusCodes';
 import ENV from '@src/common/constants/ENV';
 
+// Le code est inspiré des notes de cours : // Le code est inspiré des notes de cours : https://web3.profinfo.ca/express_jwt/
+
 /**
  * Intergiciel pour authentifier le jeton de l'utilisateur
  *
